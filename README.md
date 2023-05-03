@@ -33,6 +33,7 @@ SELECT year_ceremony FROM movies WHERE (film = 'Toy Story' or film ='Toy Story 2
 R: A Categoria "Melhor Filme" tem mais oscar's.
 
 SELECT count(id_movie) from movies where category = 'actor' and winner = '1';
+<br/>
 SELECT COUNT(id_movie) FROM movies WHERE (category = 'best picture' OR category = 'outstanding picture' OR category = 'outstanding production' OR category = 'outstanding motion picture' OR category = 'best motion picture') AND winner='1';
 
 # 6) O primeiro Oscar para melhor Atriz foi para quem? Em que ano?
@@ -45,7 +46,9 @@ SELECT * FROM movies WHERE category = 'actress' and winner = '1' ORDER BY year_c
 
 R:
 UPDATE movies SET winner=0 WHERE winner="false";
+<br/>
 UPDATE movies SET winner=1 WHERE winner="true";
+<br/>
 SELECT * FROM movies;
 
 # 8) Em qual edição do Oscar "Crash" ganhou o prêmio principal?
@@ -69,8 +72,11 @@ SELECT * FROM movies WHERE film ='central do brasil';
 R: Eu adicionei: O Homem que Copiava, Scott Pilgrim Contra o Mundo e Bacurau.
 
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2003', '2024', '95', 'BEST PICTURE', 'Jorge Furtado', 'O Homem que Copiava', '1');
+<br/>
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2010','2024','95','DIRECTING','Edgar Wright','Scott Pilgrim Contra o Mundo', '1');
+<br/>
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2019','2004','95','WRITING (Original Screenplay)','Kleber Mendonça Filho','Bacurau','1');
+<br/>
 
 SELECT * FROM movies where ceremony='95';
 
@@ -79,8 +85,11 @@ SELECT * FROM movies where ceremony='95';
 R: Eu criei as categorias: MELHOR FILME BRASILEIRO, MELHOR ADAPTAÇÃO DE QUADRINHOS E ROTEIRO MAIS FORA DA CURVA.
 
 UPDATE movies SET category = 'MELHOR FILME BRASILEIRO' WHERE film = 'O Homem que Copiava';
+<br/>
 UPDATE movies SET category = 'MELHOR ADAPTAÇÃO DE QUADRINHOS' WHERE film = 'Scott Pilgrim Contra o Mundo';
+<br/>
 UPDATE movies SET category = 'ROTEIRO MAIS FORA DA CURVA' WHERE film = 'Bacurau';
+<br/>
 
 SELECT * FROM movies where ceremony='95';
 
@@ -100,12 +109,19 @@ SELECT * FROM movies WHERE year_ceremony = '2003' AND (category = 'best picture'
 R:
 
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2017', '2024', '95', 'ACTRESS IN A LEADING ROLE', 'Mone Kamishiraishi', 'Kimi no Nawa', '0');
+<br/>
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2016', '2024', '95', 'ACTRESS IN A SUPPORTING ROLE', 'Bae Doona', 'Teo-neol', '0');
+<br/>
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2016', '2024', '95', 'ACTRESS IN A LEADING ROLE', 'Saori Hayami', 'Koe no Katachi', '0');
+<br/>
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('2014', '2024', '95', 'ACTRESS IN A LEADING ROLE', 'Shin Min-a', 'My Love, My Bride', '0');
+<br/>
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('1998', '2024', '95', 'ACTRESS IN A LEADING ROLE', 'Junko Iwao', 'Perfect Blue', '0');
+<br/>
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('1998', '2024', '95', 'ACTRESS IN A SUPPORTING ROLE', 'Rica Matsumoto', 'Perfect Blue', '0');
+<br/>
 INSERT INTO movies (year_film, year_ceremony, ceremony, category, `name`, film, winner) VALUES ('1995', '2024', '95', 'ACTRESS IN A LEADING ROLE', 'Atsuko Tanaka', 'Ghost in The Shell', '0');
+<br/>
 
 SELECT * FROM movies where ceremony='95';
 
